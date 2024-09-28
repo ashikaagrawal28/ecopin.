@@ -1,0 +1,6 @@
+flask
+flask-session
+requests
+pymongo
+cloudinary
+certifi

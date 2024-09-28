@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Login | EcoPin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <!--style-->
+    <style>
+        @font-face {
+            font-family: myfont;
+            src: url(../fonts/Poppins/Poppins-Regular.ttf);
+        }
+
+        * {
+            font-family: "Fredoka", system-ui;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d6f1c3;
+        }
+
+        .main-container {
+            height: 80vh;
+            border: 20px solid inset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #ecf0f1;
+            border-radius: 14px;
+            box-shadow: 1px 1px 15px 1px #000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 55vmin;
+            padding: 30px;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            height: 40px;
+            border-radius: 6px;
+            font-size: 90%;
+            border: 2px solid grey;
+        }
+
+        input[type='submit']:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        #signup-option {
+            padding: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 4px;
+            left: 8px;
+        }
+
+
+        @media only screen and (max-width:760px) {
+            nav {
+                display: none;
+            }
+
+            .menu {
+                display: flex !important;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .main-container {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:620px) {
+            h1 {
+                font-size: 60px !important;
+            }
+
+            .sidebar {
+                width: 60% !important;
+            }
+
+        }
+
+
+        /*header and footer*/
+        /*side bar*/
+        .sidebar {
+            display: none;
+            position: absolute;
+            height: 100vh;
+            width: 40vw;
+            background-color: #008080;
+            right: 0;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .sidebar ul {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        /*side bar end*/
+        .menu:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #008080;
+            color: white;
+            text-align: center;
+            padding: 1% 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .logo {
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            z-index: 10001;
+        }
+
+        .getset {
+            border-radius: 10px !important;
+            font-size: 100% !important;
+        }
+
+        nav {
+            background-color: #008080;
+            color: #fff;
+            height: 7%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0 1.5%;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .main,
+        .navbar {
+            height: 100%;
+        }
+
+        a {
+            font-size: 100%;
+            color: #000 !important;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            ;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 4px;
+        }
+
+        li a {
+            color: #FFF !important
+        }
+
+        li:hover {
+            border: 2px solid #000;
+            opacity: 0.8;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        /*header and footer ends*/
+    </style>
+    <!--style ends-->
+</head>
+
+<body>
+    <!--header and footer-->
+    <!--for portraits and tabs-->
+    <img src="../../images/menu.svg" style="position: absolute; top:10px; right:10px; z-index: 1002; display: none;"
+        height="30px" width="30px" class="menu">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            {% if session['email'] %}
+                <li><a href="/sendreport">Send Report</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <!--for portraits and tabs end-->
+
+    <!--absolute div-->
+
+    <div class="logo">
+        <img src="../../images/logo.png" height="45px" width="150px">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            {% if session['email'] %}
+                <li><a href="/sendreport">Send Report</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!--absolute div end-->
+
+
+    <div class="main-container">
+        <form action="/login" method="POST">
+            <label style="color:#302f2f; margin-bottom: 4px;">Enter Your Email</label>
+            <input type="email" id="email" name="email" placeholder="someone@example.com" style="padding-left:20px"
+                required><br>
+            <label style="color:#402f2f; margin-bottom: 4px;">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" style="padding-left:20px"
+                required><br><br>
+            <input type="submit" value="Login"
+                style="background-color:rgb(0,0,0); color:#FFF; font-weight:bold; font-size:25px; display:flex; height: 40px;">
+        </form>
+        <div id="signup-option" style="text-align: center;">
+            Not a user yet? <br><a href="/signup" id="makeacc">Create an account</a>
+        </div>
+    </div>
+
+
+    <footer style="position: absolute; bottom: 0;">
+        <p>© 2024 EcoPin. All Rights Reserved.</p>
+    </footer>
+    <!--header and footer end-->
+</body>
+<script>
+    let menu = document.getElementsByClassName('menu')[0];
+    let position = 0;
+
+    menu.addEventListener('click', () => {
+        if (position == 0) {
+            document.getElementsByClassName('sidebar')[0].style.display = 'flex';
+            position = 1
+        } else if (position == 1) {
+            document.getElementsByClassName('sidebar')[0].style.display = 'none';
+            position = 0;
+        }
+
+    })
+</script>
+
+</html>

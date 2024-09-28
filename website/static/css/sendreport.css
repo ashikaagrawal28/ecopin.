@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #def7f0;
+    color: #333;
+    font-family: 'roboto',sans-serif;
+    
+}
+
+nav {
+    background:#008080;
+    color: #fff;
+    padding: 1%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+}
+
+nav .logo {
+    font-size: 5%;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 1.5%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 6% 2%;
+    background-image:url(images/WhatsApp\ Image\ 2024-09-27\ at\ 10.47.29\ AM.jpeg);
+    background-position: cover;
+    color:black;
+}
+
+header .hero-img {
+    max-width: 10%;
+    height: auto;
+}
+.cta-button {
+    padding: 1% 2%;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 0.5%;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+section {
+    padding: 4% 2%;
+    text-align: center;
+    background-image:url(images/WhatsApp\ Image\ 2024-09-27\ at\ 12.56.38\ PM\ \(1\).jpeg);
+}
+
+section h2 {
+    margin-bottom: 2%;
+}
+
+section p {
+    margin-bottom: 2%;
+}
+
+footer {
+    background:#008080;
+    color: white;
+    text-align: center;
+    padding: 1% 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-page {
+    background-image: url(images/contact.jpeg);
+}
+
+.about-page {
+    background-image: url(images/about.jpeg);
+    font-size: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.login-page {
+    background-image: url(images/login.jpeg);
+}
+
+.hero-text {
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup-page {
+    background-image: url(images/signup.jpeg);
+
+}
+
+.background {
+    background-image: url(images/report.jpeg);
+}
+
+/* General Styling for the report page */
+.report-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Title inside report container */
+.report-container .report-title {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Location Container */
+.report-container .location-container {
+    margin-bottom: 20px;
+}
+
+.report-container .location-container label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.report-container .location-container input {
+    width: 100%;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/* Image Upload */
+.report-container .image-upload {
+    margin-bottom: 20px;
+}
+
+.report-container .image-upload label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.report-container .image-upload input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Description Container */
+.report-container .description-container {
+    margin-bottom: 20px;
+}
+
+.report-container .description-container label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.report-container .description-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.report-container .submit-container {
+    text-align: center;
+}
+
+.report-container .submit-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.report-container .submit-container button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .report-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .report-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .report-container .report-title {
+        font-size: 20px;
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b8e994;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.report {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.report-details p {
+    margin: 5px 0;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    background-color: #900702;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

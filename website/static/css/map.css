@@ -1,0 +1,7 @@
+/* Map container */
+#map {
+    width: 100%;
+    /* Default width for mobile devices */
+    height: 250px;
+    /* Adjust height to your preference */
+}
